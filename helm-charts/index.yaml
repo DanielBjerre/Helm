@@ -1,0 +1,18 @@
+apiVersion: v1
+entries:
+  worker:
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2023-12-15T23:25:31.8044328+01:00"
+    dependencies:
+    - name: libchart
+      repository: file://../libchart
+      version: 0.1.0
+    description: A Helm chart for Kubernetes
+    digest: eabcfa62ef1e6931011a328e4aaf982382c79b1625472ead47285d20c6540af9
+    name: worker
+    type: application
+    urls:
+    - https://github.com/DanielBjerre/Resources/worker-0.1.0.tgz
+    version: 0.1.0
+generated: "2023-12-15T23:25:31.8039083+01:00"
