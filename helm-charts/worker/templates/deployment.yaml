@@ -42,3 +42,5 @@ spec:
             readOnly: true
             volumeAttributes:
               secretProviderClass: "{{ .Release.Name }}-workload-identity"
+---
+{{- include "libchart.secretProviderClass" . }}
