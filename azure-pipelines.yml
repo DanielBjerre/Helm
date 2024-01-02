@@ -25,3 +25,5 @@ steps:
     command: 'save'
     chartNameForACR: 'worker'
     chartPathForACR: '/home/vsts/work/1/a/worker-0.1.0.tgz'
+  env:
+    HELM_EXPERIMENTAL_OCI: 1
