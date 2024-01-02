@@ -1,0 +1,27 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+trigger:
+- main
+
+pool:
+  vmImage: ubuntu-latest
+
+steps:
+
+- task: HelmDeploy@0
+  inputs:
+    command: 'package'
+    chartPath: '
+    updateDependency: true
+
+- task: HelmDeploy@0
+  inputs:
+    azureSubscriptionForACR: 'Visual Studio Enterprise-abonnement – MPN (50fc8cf7-a304-429a-8a1c-a39bc2e915d1)'
+    azureResourceGroupForACR: 'rg-shoppinghelper-prod'
+    azureContainerRegistry: 'shoppinghelper.azurecr.io'
+    command: 'save'
+    chartNameForACR: 'worker'
+    chartPathForACR: '$(Pipeline.Workspace)/s/helm-charts/worker''
