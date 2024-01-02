@@ -14,7 +14,7 @@ steps:
 - task: HelmDeploy@0
   inputs:
     command: 'package'
-    chartPath: '
+    chartPath: '$(Pipeline.Workspace)/s/helm-charts/worker'
     updateDependency: true
 
 - task: HelmDeploy@0
@@ -24,4 +24,4 @@ steps:
     azureContainerRegistry: 'shoppinghelper.azurecr.io'
     command: 'save'
     chartNameForACR: 'worker'
-    chartPathForACR: '$(Pipeline.Workspace)/s/helm-charts/worker''
+    chartPathForACR: '$(Pipeline.Workspace)/s/helm-charts/worker'
