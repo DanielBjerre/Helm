@@ -24,4 +24,4 @@ steps:
     azureContainerRegistry: 'shoppinghelper.azurecr.io'
     command: 'save'
     chartNameForACR: 'worker'
-    chartPathForACR: '$(Pipeline.Workspace)/s/helm-charts/worker'
+    chartPathForACR: '/home/vsts/work/1/a/worker-0.1.0.tgz'
